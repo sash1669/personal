@@ -5,5 +5,7 @@ if(isset($_POST['submit'])){
     $name = $_POST['name'];
     $subject = $_POST['subject'];
     $message = $name . " wrote the following:" . "\n\n" . $_POST['message'];
+  }
 
   //  $message2 = "Here is a copy of your message " . $name . "\n\n" . $_POST['message'];
+?>
