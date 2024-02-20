@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Print Unit Study</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="no-scroll print-unit-page print-unit-background"> <!-- Initially prevent scrolling -->
+    <div id="overlay"></div>
+    <div id="consent-popup">
+        <p>This study requires your consent to proceed.</p>
+        <button id="agree-btn">I Agree</button>
+    </div>
+    <div id="content" class="blur-effect"> <!-- Content blurred initially -->
+        <img src="assets/img/UoG_colour.png" alt="UofG Logo" id="uofg-logo">
+        <h1 id="main-heading">UofG Printing</h1>
+        <!-- Your main content goes here -->
+        <div id="text-rows">
+            <p> Dissertations</p>
+            <p> Posters</p>
+            <p> Business Cards</p>
+            <p> Banners</p>
+            <p> and much more ...</p>
+        </div>
+
+    </div>
+
+    <script>
+        document.getElementById('agree-btn').addEventListener('click', function() {
+            document.getElementById('overlay').style.display = 'none';
+            document.getElementById('consent-popup').style.display = 'none';
+            document.body.classList.remove('no-scroll'); // Enable scrolling
+            document.getElementById('content').classList.remove('blur-effect'); // Remove blur effect
+        });
+    </script>
+</body>
+</html>

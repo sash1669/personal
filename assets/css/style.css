@@ -15,7 +15,7 @@ body {
   position: relative;
   background: transparent;
 }
-body::before {
+body:not(.print-unit-page)::before {
   content: "";
   position: fixed;
   background: #040404 url("../img/bg.jpg") top right no-repeat;
@@ -1031,4 +1031,95 @@ section .container {
 }
 .credits a:hover {
   color: #fff;
+}
+/* Overlay styles */
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(235, 250, 255, 0.458);
+  z-index: 10;
+}
+
+/* Consent popup styles */
+#consent-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(122, 122, 122);
+  padding: 20px;
+  border-radius: 10px;
+  z-index: 20;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Prevent scrolling on the body when overlay is active */
+.no-scroll {
+  overflow: hidden;
+}
+
+/* Initial state of the main content */
+#content {
+  filter: blur(20);
+  transition: filter 0.5s;
+}
+
+/* Apply blur when overlay is active */
+body.no-scroll #content {
+  filter: blur(5px);
+}
+
+/* Existing styles... */
+
+/* Add this class to blur the main content initially */
+.blur-effect {
+  filter: blur(5px);
+  transition: filter 0.3s ease;
+}
+
+/* When the body has no-scroll class removed, it also indicates consent was given, hence removing the blur */
+body:not(.no-scroll) #content {
+  filter: blur(0);
+}
+
+/* Logo styles */
+#uofg-logo {
+  position: absolute;
+  top: 20px; /* Adjust based on your header size */
+  left: 20px; /* Adjust as needed */
+  width: 20%; /* Adjust as needed */
+}
+
+/* Main heading styles */
+#main-heading {
+  text-align: center;
+  color: #002663; /* Dark blue color, adjust if you have a specific hex code */
+  font-size: 2em; /* Adjust size as needed */
+  margin-top: 50px; /* Adjust based on your page layout */
+}
+
+/* Adjust the content area if needed */
+#content {
+  position: relative;
+  padding-top: 120px; /* Make space for the image and heading */
+  /* Keep your existing blur-effect styles */
+}
+
+.print-unit-background {
+  background-color: rgba(255, 255, 255, 0.971); /* Your chosen color */
+}
+
+#text-rows {
+  text-align: center; /* Center-align the text */
+  margin: 20px 0; /* Add some space above and below the text rows */
+  text-size-adjust:5px ;
+  color: darkblue;
+}
+
+#text-rows p {
+  margin: 10px 0; /* Add some space between the rows */
+  /* You can add more styling here such as font size, color, etc. */
 }
