@@ -1049,12 +1049,44 @@ section .container {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: rgb(122, 122, 122);
+  background-color: rgb(243, 243, 243);
   padding: 20px;
   border-radius: 10px;
   z-index: 20;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: left; 
+  padding: 20px;
+  color: #989898;
+
 }
+
+#consent-popup h2 {
+  font-size: 13px;
+  color: #000; /* Dark text color for the heading */
+  margin-bottom: 15px; /* Space between heading and paragraph */
+}
+
+#consent-popup p {
+  margin-bottom: 20px; /* Space between paragraph and buttons */
+  font-size: 10px;
+}
+
+#consent-popup button {
+  padding: 10px 15px; /* Button padding */
+  margin-right: 13px; /* Space between buttons */
+  border: none; /* Remove default border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+#agree-btn {
+  background-color: #98cc9a; /* Green background for agree button */
+  color: white; /* White text */
+}
+
+/* #disagree-btn {
+  background-color: #a8a8a8; 
+  color: white; 
+} */
 
 /* Prevent scrolling on the body when overlay is active */
 .no-scroll {
@@ -1071,8 +1103,6 @@ section .container {
 body.no-scroll #content {
   filter: blur(5px);
 }
-
-/* Existing styles... */
 
 /* Add this class to blur the main content initially */
 .blur-effect {
@@ -1122,4 +1152,51 @@ body:not(.no-scroll) #content {
 #text-rows p {
   margin: 10px 0; /* Add some space between the rows */
   /* You can add more styling here such as font size, color, etc. */
+}
+
+/* Dropdown Button */
+.dropbtn {
+  background-color: rgb(243, 243, 243);
+  color: white;
+  padding: 8px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgb(243, 243, 243);
+  min-width: 160px;
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-size: 12px;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: rgb(243, 243, 243)1f1}
+
+/* Show the dropdown button on hover */
+.dropdown:hover .dropbtn {
+  background-color: rgb(243, 243, 243);
 }

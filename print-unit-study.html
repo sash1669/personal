@@ -9,8 +9,20 @@
 <body class="no-scroll print-unit-page print-unit-background"> <!-- Initially prevent scrolling -->
     <div id="overlay"></div>
     <div id="consent-popup">
-        <p>This study requires your consent to proceed.</p>
+        <h2>QR Code Study Consent</h2> <!-- Heading -->
+        <p>We're conducting a study to understand how users interact with various QR Codes. 
+           By proceeding, you agree to allow us to collect data via Google Analytics about your scan and visit, including:
+           Date and time of access, Device type. We respect your privacy. The data collected is anonymized and used solely for this research. 
+           No personal information beyond the scope mentioned will be collected.
+           Participation is voluntary. By clicking "Agree," you consent to the data collection for this study. 
+           You can withdraw by closing the browser at any time.</p>
         <button id="agree-btn">I Agree</button>
+        <div class="dropdown">
+            <button class="dropbtn">More Options</button>
+            <div class="dropdown-content">
+                <a href="#" id="disagree-btn" onclick="window.location.href='https://www.gla.ac.uk/myglasgow/commercialservices/print/';">I Disagree (redirect to the Print Unit website)</a>
+            </div>
+        </div>
     </div>
     <div id="content" class="blur-effect"> <!-- Content blurred initially -->
         <img src="assets/img/UoG_colour.png" alt="UofG Logo" id="uofg-logo">
@@ -32,6 +44,10 @@
             document.getElementById('consent-popup').style.display = 'none';
             document.body.classList.remove('no-scroll'); // Enable scrolling
             document.getElementById('content').classList.remove('blur-effect'); // Remove blur effect
+            document.querySelector('.dropbtn').addEventListener('click', function(event) {
+                var dropdownContent = this.nextElementSibling;
+                dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
+            });
         });
     </script>
 </body>
