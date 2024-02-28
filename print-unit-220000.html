@@ -1,0 +1,53 @@
+<!-- Print Unit Regular Landing Page -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Print Unit Promo</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/study_style.css">
+</head>
+<body class="no-scroll print-unit-page print-unit-background"> <!-- Initially prevent scrolling -->
+    <div id="overlay"></div>
+    <div id="consent-popup">
+        <h2>QR Code Study Consent</h2> <!-- Heading -->
+        <p>We're conducting a study to understand how users interact with different QR Codes. 
+            By proceeding, you agree to allow us to collect data via Google Analytics about your scan and visit, including:
+            Date and time of access, Device type. We respect your privacy. The data collected is anonymized and used solely for this research. 
+            No personal information beyond the scope mentioned will be collected.</p>
+            
+        <p>Participation is voluntary. You must be 16 years of age or older to participate. 
+            By clicking the Agree button, you consent to the terms and conditions of this study. 
+            You can withdraw at any time by closing the browser. For more info contact 2483859s@student.gla.ac.uk</p>
+        <button id="agree-btn">I Agree, proceed to page</button>
+        <button id="disagree-btn">I Disagree, proceed to page</button>
+    </div>
+    <div id="logo-container">
+        <img src="assets/img/uog_white.png" alt="UofG Logo" id="uofg-logo">
+    </div>
+
+    <div id="content-landing" class="blur-effect">
+        <h1 id="main-heading">UofG Print</h1>
+
+        <div class="rectangle top-rectangle">
+            <div class="image-container">
+                <img src="assets/img/print1.jpeg" alt="Printer">
+            </div>
+            <div class="text-container">
+                <p> From business cards to banner stands and everything in between, we're your reliable partner in print.</p>
+                <p> To order online or get more info visit our <a href="https://linktr.ee/uofgprint" target="_blank"> linktree</a>.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('disagree-btn').addEventListener('click', function() {
+                window.location.href = 'print-unit-220002.html';
+            });
+        document.getElementById('agree-btn').addEventListener('click', function() {
+            window.location.href = 'print-unit-220001.html';
+        });
+    </script>
+</body>
+</html>
