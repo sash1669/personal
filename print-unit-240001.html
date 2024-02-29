@@ -22,7 +22,7 @@
             var iframe = document.querySelector('iframe');
             var currentUrl = iframe.src;
             var queryParams = new URLSearchParams(window.location.search);
-            var newUrl = currentUrl + '&entry.1194132902=' + queryParams.get('qr_code_src');
+            var newUrl = currentUrl + '&entry.1194132902=' + queryParams.get('utm_source');
             // set the src attribute of the iframe to the new url
             iframe.src = newUrl;
         });
