@@ -150,7 +150,8 @@
     text-align: center;
     color: #002663; /* Dark blue color, adjust if you have a specific hex code */
     font-size: 2.5em; /* Adjust size as needed */
-    margin-top: 20px; /* Adjust based on your page layout */
+    margin-top: 10px; /* Adjust based on your page layout */
+    margin-bottom: 2px;
     font-family: Swiss721, sans-serif; /* Adjust based on your font */
   }
   
@@ -159,7 +160,7 @@
   }
   
   .rectangle {
-    width: calc(100% - 40px); 
+    width: calc(100% - 40px);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -174,6 +175,7 @@
       display: flex; 
       justify-content: center; 
       align-items: center;
+      flex: 1;
   }
   
   .bottom-rectangle {
@@ -182,6 +184,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex:12;
   }
   
   .image-container, .text-container {

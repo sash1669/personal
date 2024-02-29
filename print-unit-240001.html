@@ -16,6 +16,18 @@
     <title>Print Unit</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/study_style.css">
+    <script>
+        window.addEventListener('load', function() {
+            // find the iframe and add current value of the query string to the src attribute as a new query string under the name 'entry.781713655'
+            var iframe = document.querySelector('iframe');
+            var currentUrl = iframe.src;
+            var queryParams = new URLSearchParams(window.location.search);
+            var newUrl = currentUrl + '&entry.1194132902=' + queryParams.get('qr_code_src');
+            // set the src attribute of the iframe to the new url
+            iframe.src = newUrl;
+        });
+    </script>
+
 </head>
 <body class="print-unit-page print-unit-background"> 
       
@@ -40,10 +52,11 @@
             </div>
         </div>
         <div class="rectangle bottom-rectangle">
-            <iframe src="YOUR_GOOGLE_FORMS_URL_HERE" frameborder="0" allowfullscreen></iframe>
+            <iframe src="https://formfacade.com/public/116906086914585406578/all/form/1FAIpQLSfYTTFFjtWd9BoCbVYz3xqvudum53UMLhv2jvDvAHjnFD_EfQ?embedded=true" width="640" height="1697" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+            <!-- <iframe src="YOUR_GOOGLE_FORMS_URL_HERE" frameborder="0" allowfullscreen></iframe> -->
         </div>
 
     </div>
-
+<!-- entry.1194132902 -->
 </body>
 </html>

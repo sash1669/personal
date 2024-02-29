@@ -7,6 +7,17 @@
     <title>Print Unit</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/study_style.css">
+    <script>
+        window.addEventListener('load', function() {
+            // find the iframe and add current value of the query string to the src attribute as a new query string under the name 'entry.781713655'
+            var iframe = document.querySelector('iframe');
+            var currentUrl = iframe.src;
+            var queryParams = new URLSearchParams(window.location.search);
+            var newUrl = currentUrl + '&entry.1145414240=' + queryParams.get('qr_code_src');
+            // set the src attribute of the iframe to the new url
+            iframe.src = newUrl;
+        });
+    </script>
 </head>
 <body class="print-unit-page print-unit-background"> <!-- Initially prevent scrolling -->
 
@@ -26,7 +37,9 @@
             </div>
         </div>
         <div class="rectangle bottom-rectangle">
-            <iframe src="YOUR_GOOGLE_FORMS_URL_HERE" frameborder="0" allowfullscreen></iframe>
+            <iframe src="https://formfacade.com/public/116906086914585406578/all/form/1FAIpQLSeka5W79Oi6g-krkFkCH_aWkUD1g_uPViQC59jfZLnB285TBg?embedded=true" width="640" height="1849" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+            <!-- <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeka5W79Oi6g-krkFkCH_aWkUD1g_uPViQC59jfZLnB285TBg/viewform?embedded=true" width="640" height="1849" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe> -->
+            <!-- <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSekenRxltv5_B6x424z8VcqKQ258OUE7zC9BTo8PWCvo5GPVQ/viewform?embedded=true" width="640" height="1849" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe> -->
         </div>
 
     </div>
