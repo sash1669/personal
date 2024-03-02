@@ -218,11 +218,11 @@
     margin: 0;
   }
 
-  .text-container p:not(:last-child) {
-    margin-bottom: 6px;
+  .text-container p:not(:last-of-type) {
+    margin-bottom: 8px;
   }
 
-  .text-container p:last-child {
+  .text-container p:last-of-type {
     margin-top: 6px;
   }
   
@@ -269,6 +269,29 @@
   
   .column-1, .column-2, .column-3 {
     width: 100%; 
+  }
+
+  .button-go-to-survey {
+    background-color: transparent;
+    color: #FFFFFF;
+    padding: 8px 10px;
+    margin-top: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+  }
+/*   
+  .button-go-to-survey:hover {
+    background-color: #8e417a;
+  } */
+
+  .chevron {
+    font-size: 48px;
   }
   
   @media screen and (max-width: 678px) {

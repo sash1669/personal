@@ -7,6 +7,7 @@
     <title>Print Unit</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/study_style.css">
+    <script src="https://kit.fontawesome.com/6429598e5c.js" crossorigin="anonymous"></script>
     <script>
         window.addEventListener('load', function() {
             // find the iframe and add current value of the query string to the src attribute as a new query string under the name 'entry.781713655'
@@ -17,6 +18,12 @@
             // set the src attribute of the iframe to the new url
             iframe.src = newUrl;
         });
+
+        function scrollToSurvey() {
+            var iframe = document.querySelector('iframe');
+            iframe.scrollIntoView({behavior: "smooth"});
+        }
+
     </script>
 </head>
 <body class="print-unit-page print-unit-background"> <!-- Initially prevent scrolling -->
@@ -34,6 +41,7 @@
                 <p> From business cards to banner stands and everything in between, we're your reliable partner in print.</p>
                 <p> To order online or get more info visit our <a href="https://linktr.ee/uofgprint" target="_blank"> linktree</a>.</p>
                 <p> Get 10% discount for filling a short survey below!</p>
+                <button role="button" onclick="scrollToSurvey()" class="button-go-to-survey"><i class="fa-solid fa-chevron-down chevron"></i></button>
             </div>
         </div>
         <iframe src="https://formfacade.com/headless/116906086914585406578/home/form/1FAIpQLSeka5W79Oi6g-krkFkCH_aWkUD1g_uPViQC59jfZLnB285TBg?embedded=true" width="640" height="1697" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>        
