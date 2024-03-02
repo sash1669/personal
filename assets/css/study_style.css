@@ -293,6 +293,24 @@
   .chevron {
     font-size: 48px;
   }
+
+  .n-bottom-rectangle {
+    background-color: rgb(180, 180, 180);
+    padding: 10px;
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    flex:12;
+  }
+
+  .n-bottom-rectangle img {
+    width: 100%; 
+    height: auto; 
+    display: block; 
+    margin-right: 10px; 
+  }
   
   @media screen and (max-width: 678px) {
     .rectangle {
@@ -318,6 +336,10 @@
     }
     .column h2, .column p {
         font-size: calc(1vw+ 20px ); 
+    }
+
+    .n-bottom-rectangle {
+      justify-content: unset;
     }
   }
   
